@@ -31,9 +31,7 @@ function HomePage() {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      const authList = data.map((til: Til) => til.author.name === user.auth);
-
-      setTils(authList);
+      setTils(data);
 
       console.log(data);
 
